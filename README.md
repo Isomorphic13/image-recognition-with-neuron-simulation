@@ -58,7 +58,6 @@ I_{3,0} \\
 I_{4,0} \\
 I_{5,0}
 \end{bmatrix}
-\tag{17}
 
 \vec{v} =
 \begin{bmatrix}
