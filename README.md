@@ -31,9 +31,8 @@ where $R_i$ is receptor neuron, which receive current signal depending on the pi
 We can describe this problem quantitatively in compact form. For the topology given above let $i \leq 5$ be index for a neuron.
 Define 
 
-$$\vec{v} = (v_1(t), ..., v_5(t)$$, 
+$$\vec{v} = (v_1(t), ..., v_5(t)$$,
 
-$\vec{i}$ as the vector of currents coming from input, $\vec{i}\_{\mathrm{out}}(t)$ as the currents coming from other neurons, $\vec{i}_{\mathrm{tot}}(t) = \vec{i}_0(t) + \vec{i}_{\mathrm{out}}(t)$ as the total currents, and $\vec{w}_i$ as the weights vector corresponding to how other neurons connect to neuron $i$.
 
 
 
