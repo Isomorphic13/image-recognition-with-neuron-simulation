@@ -42,4 +42,71 @@ where $R_i$ is receptor neuron, which receive current signal depending on the pi
 
 ![topology](images/topology2.png)
 
+This allows us to describe our problem quantitatively using the tools that were already implemented for Task 2. The state of the neural network is then given by:
+
+$$
+\vec{i}*{out}(t) = W \vec{v}(\vec{i}*{total}, t)
+$$
+
+$$
+\vec{i}*{total} = \vec{i}*{out} + \vec{i}_{0}
+$$
+
+$$
+\vec{i}*{out}(t) =
+\begin{bmatrix}
+I*{1,out}(t) \
+I_{2,out}(t) \
+I_{3,out}(t) \
+I_{4,out}(t) \
+I_{5,out}(t)
+\end{bmatrix},
+\qquad
+\vec{v} =
+\begin{bmatrix}
+V_1(I_{1,total}, t) \
+V_2(I_{2,total}, t) \
+V_3(I_{3,total}, t) \
+V_4(I_{4,total}, t) \
+V_5(I_{5,total}, t)
+\end{bmatrix},
+\qquad
+\vec{i}*0 =
+\begin{bmatrix}
+I*{1,0} \
+I_{2,0} \
+I_{3,0} \
+I_{4,0} \
+I_{5,0}
+\end{bmatrix}
+\tag{17}
+$$
+
+$$
+W =
+\begin{bmatrix}
+0 & 0 & 0 & 0 & 0 \
+w_{12} & 0 & 0 & 0 & 0 \
+0 & 0 & 0 & 0 & 0\
+0 & 0 & w_{34} & 0 & 0 \
+w_{15} & w_{25} & w_{35} & w_{45} & 0
+\end{bmatrix}
+$$
+
+Here, $I_{i,out}(t)$ is the current applied to neuron $i$ by other neurons, $I_{i,0}$ is the input current, and $V_i(t)$ is the voltage of neuron $i$. The input current is $I_0 = 15$ nA for a white pixel and $I_0 = -8$ nA for a black pixel.
+
+We use the Runge-Kutta method. However, instead of calculating the state $[V,n,m,h]^T$ over a time interval $T$, it now calculates the matrix
+
+$$
+S(t) =
+\begin{bmatrix}
+V_1(t) & n_1(t) & m_1(t) & h_1(t) \
+\vdots & \vdots & \vdots & \vdots \
+V_5(t) & n_5(t) & m_5(t) & h_5(t)
+\end{bmatrix}.
+$$
+
+In the next cell, the voltage trajectories for all possible $2 \times 2$ pixel grids are shown using manually selected weights. We can see that some signals cross the threshold $V = 0$. Our goal is to use a machine learning algorithm to find weights such that the voltage crosses this threshold for chessboard inputs but not for the other inputs.
+
+
 
