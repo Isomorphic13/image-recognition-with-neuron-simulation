@@ -20,6 +20,7 @@ $$
 $$
 \frac{d\vec{s}}{dt} = F(V,n,m,h,t) := (f_v, f_n, f_m, f_h, t)^T
 $$
+
 For example, this is membrane voltage over time for different constant current:
 ![Voltage over time](images/voltage_dynamics_diff_currents1.png)
 
