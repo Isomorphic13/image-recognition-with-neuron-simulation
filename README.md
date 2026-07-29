@@ -4,7 +4,9 @@ $$ C_m \frac{dV}{dt} = I_{\mathrm{ext}} - I_{Na} - I_{K} - I_{L} = g_{\mathrm{Na
 
 $$ \frac{dn}{dt} = \alpha_n(V)(1-n) - \beta_n(V)n = f_{n}(V,n,m,h,t) $$ $$ \frac{dm}{dt} = \alpha_m(V)(1-m) - \beta_m(V)m = f_{m}(V,n,m,h,t) $$ 
 
-$$ \frac{dh}{dt} = \alpha_h(V)(1-h) - \beta_h(V)h = f_{h}(V,n,m,h,t) $$ or in short form it can be written with state vector $\vec{s}$: 
+$$ \frac{dh}{dt} = \alpha_h(V)(1-h) - \beta_h(V)h = f_{h}(V,n,m,h,t) $$ 
+
+or in short form it can be written with state vector $\vec{s}$: 
 
 $$ \vec{s}(t) := (V, n, m , h, t)^T $$ 
 
