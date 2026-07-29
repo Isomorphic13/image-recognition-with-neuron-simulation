@@ -31,7 +31,9 @@ where $R_i$ is receptor neuron, which receive current signal depending on the pi
 We can describe this problem quantitatively in compact form. For the topology given above let $i \leq 5$ be index for a neuron.
 Define 
 
-$$\vec{v} = (v_1(t), ..., v_5(t)$$,
+$$
+\vec{v} = (v_1(t), ..., v_5(t))^T
+$$
 
 
 
