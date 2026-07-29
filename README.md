@@ -1,5 +1,5 @@
 This is a rewritten project from my computational physics course for demonstration purpose. The topic of the project is chess board recognition 
-using the Hodgkin-Huxley model for neurons. Shortly said, the model describes the membrane voltage of neuron with a system of differential equations. The voltage depends on membrane capacity $C_m$, outer current $I$, currents $I_{Na}$, $I_K$ from Na and K ions inside and outside the membrane, leak current $I_L$:
+using the Hodgkin-Huxley model for neurons. Shortly said, the model describes the membrane voltage of neuron with a system of differential equations. The voltage depends on membrane capacity $C_m$, outer current $I_{ext}$, currents $I_{Na}$, $I_K$ from Na and K ions inside and outside the membrane, leak current $I_L$:
 
 $$
 C_m \frac{dV}{dt} = I_{\mathrm{ext}} - I_{Na} - I_{Ka} - I_{L} = g_{\mathrm{Na}}m^3h(V-E_{\mathrm{Na}}) - g_{\mathrm{K}}n^4(V-E_{\mathrm{K}}) - g_{\mathrm{L}}(V-E_{\mathrm{L}}) = f_{V}(V,n,m,h,t)
@@ -20,5 +20,6 @@ $$
 $$
 \frac{d\vec{s}}{dt} = F(V,n,m,h,t) := (f_v, f_n, f_m, f_h, t)^T
 $$
-
+For example, this is membrane voltage over time for different constant current:
+![Voltage over time](images/voltage_dynamics_diff_currents1.png)
 
