@@ -61,7 +61,7 @@ V_5(I_{5,total}, t)
 $$
 
 $$
-\vec{i}0 =
+\vec{i}_0 =
 \begin{bmatrix}
 I{1,0} \
 I_{2,0} \
