@@ -1,49 +1,97 @@
-This is a rewritten project from my computational physics course for demonstration purpose. The topic of the project is chess board recognition 
-using the Hodgkin-Huxley model for neurons. Shortly said, the model describes the membrane voltage of neuron with a system of differential equations. The voltage depends on membrane capacity $C_m$, outer current $I_{ext}$, currents $I_{Na}$, $I_K$ from Na and K ions inside and outside the membrane, leak current $I_L$:
+This is a rewritten project from my Computational Physics course for demonstration purposes. The topic of the project is chessboard recognition using the Hodgkin-Huxley model of neurons.
 
-$$
-C_m \frac{dV}{dt} = I_{\mathrm{ext}} - I_{Na} - I_{Ka} - I_{L} = g_{\mathrm{Na}}m^3h(V-E_{\mathrm{Na}}) - g_{\mathrm{K}}n^4(V-E_{\mathrm{K}}) - g_{\mathrm{L}}(V-E_{\mathrm{L}}) = f_{V}(V,n,m,h,t)
-$$
-$$
-\frac{dn}{dt} = \alpha_n(V)(1-n) - \beta_n(V)n = f_{n}(V,n,m,h,t)
-$$
-$$
-\frac{dm}{dt} = \alpha_m(V)(1-m) - \beta_m(V)m = f_{m}(V,n,m,h,t)
-$$
-$$
-\frac{dh}{dt} = \alpha_h(V)(1-h) - \beta_h(V)h = f_{h}(V,n,m,h,t)
-$$
-or in short form it can be written with state vector $\vec{s}$:
-$$
-\vec{s}(t) := (V, n, m , h, t)^T
-$$
-$$
-\frac{d\vec{s}}{dt} = F(V,n,m,h,t) := (f_v, f_n, f_m, f_h, t)^T
+In short, the Hodgkin-Huxley model describes the membrane voltage of a neuron using a system of differential equations. The voltage depends on the membrane capacitance $C_m$, external current $I_{\mathrm{ext}}$, sodium current $I_{\mathrm{Na}}$, potassium current $I_{\mathrm{K}}$, and leak current $I_{\mathrm{L}}$:
+
+I_{\mathrm{ext}}
+
+I_{\mathrm{Na}}
+I_{\mathrm{K}}
+I_{\mathrm{L}}
 $$
 
-There is no analytical solution for this system and we use Runge-Kutta method of grade 4 for calculations.
-For example, this is membrane voltage over time for different constant current:
-![Voltage over time](images/voltage_dynamics_diff_currents1.png)
-
-![Voltage over time](images/voltage_dynamics_diff_currents2.png)
-
-As we see different currents cause different voltage dynamics. We will use this property later, when we will set different outer currents for white and black pixels. 
-
-
-The second important property of current in physiological neurons is how voltages $i$ in neuron chains cause current in neuron $j$:
+with
 
 $$
-I_j = \sum_{i < j} w_{ij} V_i
+I_{\mathrm{Na}} = g_{\mathrm{Na}}m^3h(V-E_{\mathrm{Na}})
 $$
-where i is a previous neuron in chain and $w_{ij}$ is activation parameter later weight. In this project we use the following simple topology:
 
-![topology](images/topology1.png)
+$$
+I_{\mathrm{K}} = g_{\mathrm{K}}n^4(V-E_{\mathrm{K}})
+$$
 
-where $R_i$ is receptor neuron, which receive current signal depending on the pixel colour, $E$ is deciding neuron, which voltage we use for the decision. Here are the corresponding weights ($E$ was changed to $R_5$ for readability):
+$$
+I_{\mathrm{L}} = g_{\mathrm{L}}(V-E_{\mathrm{L}})
+$$
 
-![topology](images/topology2.png)
+Therefore,
 
-This allows us to describe our problem quantitatively using the tools that were already implemented for Task 2. The state of the neural network is then given by:
+I_{\mathrm{ext}}
+
+g_{\mathrm{Na}}m^3h(V-E_{\mathrm{Na}})
+g_{\mathrm{K}}n^4(V-E_{\mathrm{K}})
+g_{\mathrm{L}}(V-E_{\mathrm{L}})
+=
+f_V(V,n,m,h,t)
+$$
+
+The remaining state variables are described by:
+
+\alpha_n(V)(1-n)-\beta_n(V)n
+
+f_n(V,n,m,h,t)
+$$
+
+\alpha_m(V)(1-m)-\beta_m(V)m
+
+f_m(V,n,m,h,t)
+$$
+
+\alpha_h(V)(1-h)-\beta_h(V)h
+
+f_h(V,n,m,h,t)
+$$
+
+The system can be written in short form using the state vector $\vec{s}$:
+
+$$
+\vec{s}(t) := (V,n,m,h)^T
+$$
+
+F(V,n,m,h,t)
+:=
+(f_V,f_n,f_m,f_h)^T
+$$
+
+There is no analytical solution for this system, so we use the fourth-order Runge-Kutta method for numerical calculations.
+
+For example, the following plots show the membrane voltage over time for different constant external currents:
+
+
+
+
+
+
+
+As we can see, different external currents produce different voltage dynamics. We will use this property later by applying different external currents to white and black pixels.
+
+Neural Network
+
+The second important property of current in physiological neurons is how the voltage of neuron $i$ in a neuron chain contributes to the current of neuron $j$:
+
+$$
+I_j = \sum_{i<j} w_{ij}V_i
+$$
+
+where $i$ denotes a preceding neuron in the chain and $w_{ij}$ is the coupling parameter, which later serves as a weight.
+
+In this project, we use the following simple topology:
+
+
+
+
+Here, $R_i$ represents a receptor neuron that receives an input current depending on the corresponding pixel color, while $E$ is the deciding neuron whose voltage is used to make the final classification.
+
+The corresponding weights are shown below. The deciding neuron $E$ is labeled as $R_5$ in this diagram for readability:
 
 
 In the next cell, the voltage trajectories for all possible $2 \times 2$ pixel grids are shown using manually selected weights. We can see that some signals cross the threshold $V = 0$. Our goal is to use a machine learning algorithm to find weights such that the voltage crosses this threshold for chessboard inputs but not for the other inputs.
