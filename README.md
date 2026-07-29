@@ -39,7 +39,7 @@ $$
 $$
 
 $$
-\vec{i}_{out}(t) =
+\vec{i}_{out}(t) = (I_{5,out}(t), I_{5,out}(t), I_{5,out}(t), I_{5,out}(t), I_{5,out}(t))^T
 \begin{bmatrix}
 I_{1,out}(t) \\
 I_{2,out}(t) \\
@@ -58,6 +58,7 @@ I_{3,0} \\
 I_{4,0} \\
 I_{5,0}
 \end{bmatrix}
+
 
 \vec{v} =
 \begin{bmatrix}
