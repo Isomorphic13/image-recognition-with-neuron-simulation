@@ -28,44 +28,9 @@ where $R_i$ is receptor neuron, which receive current signal depending on the pi
 
 ![topology](images/topology2.png) 
 
-We can describe this problem quantitatively in compact form. For the topology given above let $i \leq 5$ be index for a neuron. That we can write define $\vec{v}(t)$ vector of voltages, $\vec{i}_0(t)$ vector of currents coming form input, $\vec{i}_{out}(t)$ currents coming from other neuron, $\vec{i}_{out}(t) = \vec{i}_0(t) + \vec{i}_{out}(t)$ total currents, $\vec{w}_i(t)$ weights vector corresponding to how other neurons connected the neuron $i$.
+We can describe this problem quantitatively in compact form. For the topology given above let $i \leq 5$ be index for a neuron. That we can write define $\vec{v}(t)$ vector of voltages, $\vec{i}_0(t)$ vector of currents coming form input, $\vec{i}_{out}(t)$ currents coming from other neurons, $\vec{i}_{out}(t) = \vec{i}_0(t) + \vec{i}_{out}(t)$ total currents, $\vec{w}_i(t)$ weights vector corresponding to how other neurons connected the neuron $i$.
 
-$$
-\vec{i}_{out}(t) = W \vec{v}(\vec{i}_{total}, t)
-$$
 
-$$
-\vec{i}_{total} = \vec{i}_{out} + \vec{i}_{0}
-$$
-
-$$
-\vec{i}_{out}(t) = (I_{5,out}(t), I_{5,out}(t), I_{5,out}(t), I_{5,out}(t), I_{5,out}(t))^T
-$$
-
-$$
-\vec{i}_0 =
-(I_{1},
-I_{2},
-I_{3}, 
-I_{4}, 
-I_{5}
-)^T
-$$
-
-$$
-\vec{v} =
-(
-V_1(I_{1,total}, t),
-V_2(I_{2,total}, t),
-V_3(I_{3,total}, t),
-V_4(I_{4,total}, t),
-V_5(I_{5,total}, t)
-)^T
-$$
-
-$$
-W = (\vec{w_1}, \vec{w_2}, \vec{w_3}, \vec{w_4}, \vec{w_5})
-$$
 
 
 
