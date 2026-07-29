@@ -16,7 +16,7 @@ There is no analytical solution for this system and we use Runge-Kutta method of
 
 ![Voltage over time](images/voltage_dynamics_diff_currents1.png) ![Voltage over time](images/voltage_dynamics_diff_currents2.png)
 
-As we see, different currents cause different voltage dynamics. We will use this property later, when we will set different outer currents for white and black pixels. The second important property of current in physiological neurons is how voltages $i$ in neuron chains cause current in neuron $j$: 
+As we see, different currents cause different voltage dynamics. We will use this property later, when we will set different apllied currents for white and black pixels. The second important property of current in physiological neurons is how voltages $V_i$ in neuron chains cause current in neuron $j$: 
 
 $$ I_j = \sum_{i < j} w_{ij} V_i $$ 
 
@@ -32,8 +32,26 @@ We can describe this problem quantitatively in compact form. For the topology gi
 Define 
 
 $$
-\vec{v} = (v_1(t), ..., v_5(t))^T, \text{vector of voltages}
+\vec{v} = (V_1(t), ..., V_5(t))^T \text{vector of voltages}
 $$
+
+$$
+\vec{i_{0}} = (I_{1,0}, ..., I_{5,0})^T \text{currents from input}
+$$
+
+$$
+\vec{w_i} = (w_{i,1}, w_{i,2}, ..., w_{i,5})^T \text{connection from i-th neuron to others}
+$$
+Then we can write:
+
+$$
+\vec{i_{out}}(t) = W \vec{v}(\vec{i_{tot}}, t)
+$$
+
+where $\vec{v_{out}}$ currents in neurons from other neuron, $\vec{i_{tot}} = \vec{i_{out}} + \vec{v_{0}}$ total current applied to the neurons
+
+
+
 
 
 
