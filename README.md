@@ -24,3 +24,5 @@ $$
 For example, this is membrane voltage over time for different constant current:
 ![Voltage over time](images/voltage_dynamics_diff_currents1.png)
 
+![Voltage over time](images/voltage_dynamics_diff_currents2.png)
+
