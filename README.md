@@ -31,15 +31,15 @@ where $R_i$ is receptor neuron, which receive current signal depending on the pi
 This allows us to describe our problem quantitatively using the tools that were already implemented for Task 2. The state of the neural network is then given by:
 
 $$
-\vec{i}{out}(t) = W \vec{v}(\vec{i}{total}, t)
+\vec{i}_{out}(t) = W \vec{v}(\vec{i}_{total}, t)
 $$
 
 $$
-\vec{i}{total} = \vec{i}{out} + \vec{i}_{0}
+\vec{i}_{total} = \vec{i}_{out} + \vec{i}_{0}
 $$
 
 $$
-\vec{i}{out}(t) =
+\vec{i}_{out}(t) =
 \begin{bmatrix}
 I_{1,out}(t) \
 I_{2,out}(t) \
