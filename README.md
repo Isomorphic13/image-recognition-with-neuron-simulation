@@ -13,3 +13,7 @@ $$
 $$
 \frac{dh}{dt} = \alpha_h(V)(1-h) - \beta_h(V)h
 $$
+or in short form with state vector $\vec{s}$:
+$$
+\vec{s}(t) = (V)
+$$
