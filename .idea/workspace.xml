@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9126e375-1f0c-4fc9-976d-b2f1dd8ae9b5" name="Changes" comment="forgot one file to include." />
+    <list default="true" id="9126e375-1f0c-4fc9-976d-b2f1dd8ae9b5" name="Changes" comment="forgot one file to include.">
+      <change afterPath="$PROJECT_DIR$/images/learning_dynamics.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/test_result.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/topology1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/topology2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/voltage_dynamics.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/voltage_dynamics_diff_currents1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/voltage_dynamics_diff_currents2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Isomorphic13&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Isomorphic13/image-recognition-with-neuron-simulation.git&quot;,
+    &quot;accountId&quot;: &quot;3f0981c6-6ef9-43fd-bb8a-d2015c59b8b2&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2,
   &quot;fromUser&quot;: false
@@ -37,7 +58,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/toima/PycharmProjects/image_recognition_with_HHM",
+    "last_opened_file_path": "C:/Users/toima/PycharmProjects/image_recognition_with_HHM/images",
     "node.js.detected.package.jshint": "true",
     "node.js.selected.package.jshint": "",
     "nodejs_package_manager_path": "npm"
