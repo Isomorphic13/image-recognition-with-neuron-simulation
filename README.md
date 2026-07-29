@@ -44,7 +44,7 @@ $$
 
 $$
 \vec{i}_0 =
-I_{1,0},
+(I_{1,0},
 I_{2,0},
 I_{3,0}, 
 I_{4,0}, 
@@ -54,13 +54,13 @@ $$
 
 
 \vec{v} =
-\begin{bmatrix}
-V_1(I_{1,total}, t) \\
-V_2(I_{2,total}, t) \\
-V_3(I_{3,total}, t) \\
-V_4(I_{4,total}, t) \\
+(
+V_1(I_{1,total}, t),
+V_2(I_{2,total}, t),
+V_3(I_{3,total}, t),
+V_4(I_{4,total}, t),
 V_5(I_{5,total}, t)
-\end{bmatrix},
+)^T
 $$
 
 $$
