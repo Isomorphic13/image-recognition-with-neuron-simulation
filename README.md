@@ -47,7 +47,9 @@ I_{3,out}(t) \
 I_{4,out}(t) \
 I_{5,out}(t)
 \end{bmatrix},
-\qquad
+$$
+
+$$
 \vec{v} =
 \begin{bmatrix}
 V_1(I_{1,total}, t) \
@@ -56,7 +58,9 @@ V_3(I_{3,total}, t) \
 V_4(I_{4,total}, t) \
 V_5(I_{5,total}, t)
 \end{bmatrix},
-\qquad
+$$
+
+$$
 \vec{i}0 =
 \begin{bmatrix}
 I{1,0} \
