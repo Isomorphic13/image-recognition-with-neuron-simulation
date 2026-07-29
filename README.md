@@ -32,7 +32,7 @@ We can describe this problem quantitatively in compact form. For the topology gi
 Define 
 
 $$
-\vec{v} = (v_1(t), ..., v_5(t))^T
+\vec{v} = (v_1(t), ..., v_5(t))^T, \text{vector of voltages}
 $$
 
 
