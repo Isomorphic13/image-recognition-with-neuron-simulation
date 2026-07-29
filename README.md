@@ -41,7 +41,7 @@ $$
 $$
 \vec{i}{out}(t) =
 \begin{bmatrix}
-I{1,out}(t) \
+I_{1,out}(t) \
 I_{2,out}(t) \
 I_{3,out}(t) \
 I_{4,out}(t) \
