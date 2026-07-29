@@ -26,3 +26,15 @@ For example, this is membrane voltage over time for different constant current:
 
 ![Voltage over time](images/voltage_dynamics_diff_currents2.png)
 
+As we see different currents cause different voltage dynamics. We will use this property later, when we will set different outer currents for white and black pixels. 
+
+
+The second important property of current in physiological neurons is how voltages $i$ in neuron chains cause current in neuron $j$:
+$$
+I_j = \sum{i < j} w_{ij}V_i
+$$
+where i is a previous neuron in chain and $w_{ij}$ is activation parameter later weight. In this project we use the following simple topology:
+
+![topology](images/topology1.png)
+with corresponding weights
+![topology](images/topology2.png)
