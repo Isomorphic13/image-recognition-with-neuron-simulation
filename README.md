@@ -28,7 +28,7 @@ where $R_i$ is receptor neuron, which receive current signal depending on the pi
 
 ![topology](images/topology2.png) 
 
-This allows us to describe our problem quantitatively using the tools that were already implemented for Task 2. The state of the neural network is then given by:
+We can describe this problem quantitatively in compact form. For the topology given above let $i \leq 5$ be index for a neuron. That we can write define $\vec{v}(t)$ vector of voltages, $\vec{i}_0(t)$ vector of currents coming form input, $\vec{i}_{out}(t)$ currents coming from other neuron, $\vec{i}_{out}(t) = \vec{i}_0(t) + \vec{i}_{out}(t)$ total currents, $\vec{w}_i(t)$ weights vector corresponding to how other neurons connected the neuron $i$.
 
 $$
 \vec{i}_{out}(t) = W \vec{v}(\vec{i}_{total}, t)
@@ -44,11 +44,11 @@ $$
 
 $$
 \vec{i}_0 =
-(I_{1,0},
-I_{2,0},
-I_{3,0}, 
-I_{4,0}, 
-I_{5,0}
+(I_{1},
+I_{2},
+I_{3}, 
+I_{4}, 
+I_{5}
 )^T
 $$
 
