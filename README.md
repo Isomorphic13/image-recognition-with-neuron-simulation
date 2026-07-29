@@ -1,7 +1,7 @@
 This is a rewritten project from my Computational Physics course for demonstration purposes. The topic of the project is chessboard recognition using the Hodgkin-Huxley model of neurons.
 
 In short, the Hodgkin-Huxley model describes the membrane voltage of a neuron using a system of differential equations. The voltage depends on the membrane capacitance $C_m$, external current $I_{\mathrm{ext}}$, sodium current $I_{\mathrm{Na}}$, potassium current $I_{\mathrm{K}}$, and leak current $I_{\mathrm{L}}$:
-
+$$
 I_{\mathrm{ext}}
 
 I_{\mathrm{Na}}
