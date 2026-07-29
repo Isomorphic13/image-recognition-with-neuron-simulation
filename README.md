@@ -13,14 +13,14 @@ $$
 $$
 \frac{dh}{dt} = \alpha_h(V)(1-h) - \beta_h(V)h = f_{h}(V,n,m,h,t)
 $$
-or in short form with state vector $\vec{s}$:
+or in short form it can be written with state vector $\vec{s}$:
 $$
 \vec{s}(t) := (V, n, m , h, t)^T
 $$
 $$
 \frac{d\vec{s}}{dt} = F(V,n,m,h,t) := (f_v, f_n, f_m, f_h, t)^T
 $$
-
+There is no analytical solution for this system and we use Runge-Kutta method of grade 4 for calculations.
 For example, this is membrane voltage over time for different constant current:
 ![Voltage over time](images/voltage_dynamics_diff_currents1.png)
 
@@ -32,12 +32,14 @@ As we see different currents cause different voltage dynamics. We will use this 
 The second important property of current in physiological neurons is how voltages $i$ in neuron chains cause current in neuron $j$:
 
 $$
-I_j = \sum{i < j} w_{ij} V_i
+I_j = \sum_{i < j} w_{ij} V_i
 $$
 where i is a previous neuron in chain and $w_{ij}$ is activation parameter later weight. In this project we use the following simple topology:
 
 ![topology](images/topology1.png)
 
-with corresponding weights
+where $R_i$ is receptor neuron, which receive current signal depending on the pixel colour, $E$ is deciding neuron, which voltage we use for the decision. Here are the corresponding weights:
 
 ![topology](images/topology2.png)
+
+
