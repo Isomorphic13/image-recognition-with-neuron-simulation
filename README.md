@@ -38,7 +38,7 @@ where i is a previous neuron in chain and $w_{ij}$ is activation parameter later
 
 ![topology](images/topology1.png)
 
-where $R_i$ is receptor neuron, which receive current signal depending on the pixel colour, $E$ is deciding neuron, which voltage we use for the decision. Here are the corresponding weights:
+where $R_i$ is receptor neuron, which receive current signal depending on the pixel colour, $E$ is deciding neuron, which voltage we use for the decision. Here are the corresponding weights ($E$ was changed to $R_5$ for readability):
 
 ![topology](images/topology2.png)
 
