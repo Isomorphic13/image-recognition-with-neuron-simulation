@@ -21,9 +21,13 @@ As we see, different currents cause different voltage dynamics. We will use this
 $$ I_j = \sum_{i < j} w_{ij} V_i $$ 
 
 where i is a previous neuron in chain and $w_{ij}$ is activation parameter later weight. In this project we use the following simple topology:
+
 ![topology](images/topology1.png) 
+
 where $R_i$ is receptor neuron, which receive current signal depending on the pixel colour, $E$ is deciding neuron, which voltage we use for the decision. Here are the corresponding weights ($E$ was changed to $R_5$ for readability): 
+
 ![topology](images/topology2.png) 
+
 This allows us to describe our problem quantitatively using the tools that were already implemented for Task 2. The state of the neural network is then given by:
 
 
