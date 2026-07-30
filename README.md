@@ -14,7 +14,7 @@ $$
 \frac{d \vec{s}}{dt} := F(V,n,m,h,t)^T \ \ \ (3)
 $$
 
-Then the we can describe a neural network with the following equations:
+Then the we can describe a neural network with $n$ neurons with the following equations:
 
 $$
 \vec{i_{total}}(t) = \vec{i_{out}}(t) + \vec{i_{p}} \ \ \(4),
@@ -34,6 +34,11 @@ Where index of each element corresponds to a neural cell in the network. $\vec{i
 
 ![topology](images/topology2.png) 
 
+We compute the state of whole network with state matrix:
+
+$$
+S(t) = (\vec{s_1}^T(t), ... , \vec{s_n}^T(t)
+$$
 
 As we see, different currents cause different voltage dynamics. We will use this property later, when we will set different apllied currents for white and black pixels. The second important property of current in physiological neurons is how voltages $V_i$ in neuron chains cause current in neuron $j$: 
 
