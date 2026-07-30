@@ -28,7 +28,7 @@ $$
 W = (\vec{w_1}, \vec{w_2}, ..., \vec{w_n}) \ \ \ (6),
 $$
 
-In (4) and (5) an index of each element in vectors represent the corresponding quantity of a neural cell in the network. $\vec{i_{total}}$ is total currents applied to a cell, $\vec{i_{out}}$ outer currents caused from other cells, $\vec{i_{p}}$ is currents coming from input in each pixel, $\vec{v}$ is membrane voltages, $\vec{w_{k}}$ connections from neuron k to the rest including itself (which is of course equal to to zero). Here is an example for a neural network and its topology: 
+In (4) and (5) an index of each element in vectors represent the corresponding quantity of a neural cell in the network. $\vec{i_{total}}$ is total currents applied to a cell, $\vec{i_{out}}$ outer currents caused from other cells, $\vec{i_{p}}$ is currents coming from input in each pixel, $\vec{v}$ is membrane voltages. $W$ in (6) is weight matrix, where $\vec{w_{k}}$ is connections from neuron k to the rest including itself (which is of course equal to to zero). Here is an example for a neural network and its topology: 
 
 ![topology](images/topology1.png) 
 
