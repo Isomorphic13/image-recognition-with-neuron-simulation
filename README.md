@@ -15,6 +15,7 @@ $$
 $$
 
 Then the we can describe a neural network with the following equations:
+
 $$
 \vec{i_{total}}(t) = \vec{i_{out}}(t) + \vec{i_{p}}(t)
 $$
@@ -24,7 +25,7 @@ $$
 $$
 
 $$
-W = (\vec{w_1}, \vec{w_2}, ..., vec{w_n})
+W = (\vec{w_1}, \vec{w_2}, ..., \vec{w_n})
 $$
 
 Where each element 
