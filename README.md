@@ -14,7 +14,7 @@ $$
 \frac{d \vec{s}}{dt} := F(V,n,m,h,t)^T \ \ \ (3)
 $$
 
-Then the we can describe a neural network with $k$ neurons with the following equations:
+Then the we can describe a neural network with $n$ neurons with the following equations:
 
 $$
 \vec{i_{total}}(t) = \vec{i_{out}}(t) + \vec{i_{p}} \ \ \(4),
