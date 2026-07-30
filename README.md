@@ -5,7 +5,7 @@ we can make a model that recognize patterns such as chess arranged pixel grids.
 
 $$ I_j = \sum_{i < j} w_{ij} V_i , \text{where } i \text{ is a previous neuron in neural chain} \ \ \ (1)$$ 
 
-First, let define state of a single neuron with state vector, which is calculated numerically with Runge-Kutta method:
+First, we define state of a single neuron with state vector, which is calculated numerically with Runge-Kutta method:
 
 $$
 \vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T \ \ \ (2), 
