@@ -34,11 +34,15 @@ Where index of each element corresponds to a neural cell in the network. $\vec{i
 
 ![topology](images/topology2.png) 
 
-The module 'neural_network.py' computes the state dynamics over a time interval and gives the voltage function over time for the neuron E. 'neural_network' calls module 'ode_solver_runge_kutta.py' to calculate the state matrix over time, which itself calls module 'equations' to find the state matrix in time point $t_0$.
+The module 'neural_network.py' computes the state dynamics over a time interval and gives the voltage function over time for the neuron E. 'neural_network' calls module 'ode_solver_runge_kutta.py' to calculate the state matrix over time
 
 $$
 S(t) = (\vec{s_1}^T(t), ... , \vec{s_n}^T(t) \ \ \ (7)
 $$
+
+, which itself calls module 'equations' to find the state matrix in time point $t_0$.
+
+
 
 Our goal is to find weights, such that voltage in the cell E passes the threshold $V_0 = 0$ for chess arranged pixel grids and remains under zero for other grids. To find optimal weights, the module 'learning_model' implements random walk algorithm and calls the module 'neural_network' in each iteration. Below is the result of the method for the given topology example:
 
