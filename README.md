@@ -40,7 +40,11 @@ $$
 S(t) = (\vec{s_1}^T(t), ... , \vec{s_n}^T(t) \ \ \ (7)
 $$
 
-The module 'learning_model' than uses 'neural_network' to find the optimal weights, such that voltage in the cell E passes the threshold $V_0 = 0$ for chess arranged pixel grids and remains under zero for other grids.
+Our goal is to find weights, such that voltage in the cell E passes the threshold $V_0 = 0$ for chess arranged pixel grids and remains under zero for other grids. To find optimal weights, the module 'learning_model' implements random walk algorithm and calls the module 'neural_network' in each iteration. Below is the result of the method for the given topology example:
+
+![topology](images/test.png) 
+
+ 
 
 
 
