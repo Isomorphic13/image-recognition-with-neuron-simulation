@@ -9,8 +9,9 @@ Let define state of a single neuron with state vector, which is calculated numer
 
 $$
 \vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T , 
-\\
-\frac{d \vec{s}}{t} := F(V,n,m,h,t)
+$$
+$$
+\frac{d \vec{s}}{t} := F(V,n,m,h,t)^T
 $$
 
 Then the we can describe a neural network with the following equations
