@@ -28,7 +28,7 @@ $$
 W = (\vec{w_1}, \vec{w_2}, ..., \vec{w_n}) \ \ \ (6),
 $$
 
-Where index of each element corresponds to a neural cell in the network. $\vec{i_{total}}$ is total currents applied to a cell, $\vec{i_{out}}$ outer currents caused from other cells, $\vec{i_{p}}$ is currents coming from input in each pixel, $\vec{v}$ is membrane voltages, $\vec{w_{n}}$ connections from neuron n to the rest including itself (which is of course equal to to zero). Here is an example for a neural network and it topology: 
+Where index of each element corresponds to a neural cell in the network. $\vec{i_{total}}$ is total currents applied to a cell, $\vec{i_{out}}$ outer currents caused from other cells, $\vec{i_{p}}$ is currents coming from input in each pixel, $\vec{v}$ is membrane voltages, $\vec{w_{k}}$ connections from neuron k to the rest including itself (which is of course equal to to zero). Here is an example for a neural network and it topology: 
 
 ![topology](images/topology1.png) 
 
@@ -37,7 +37,7 @@ Where index of each element corresponds to a neural cell in the network. $\vec{i
 The module 'neural_network.py' computes the state dynamics over a time interval and gives the voltage function over time for the neuron E. 'neural_network' calls module 'ode_solver_runge_kutta.py' to calculate the state matrix over time, which itself calls module 'equations' to find the state matrix in time point $t_0$.
 
 $$
-S(t) = (\vec{s_1}^T(t), ... , \vec{s_k}^T(t) \ \ \ (7)
+S(t) = (\vec{s_1}^T(t), ... , \vec{s_n}^T(t) \ \ \ (7)
 $$
 
 Our goal is to find weights, such that voltage in the cell E passes the threshold $V_0 = 0$ for chess arranged pixel grids and remains under zero for other grids. To find optimal weights, the module 'learning_model' implements random walk algorithm and calls the module 'neural_network' in each iteration. Below is the result of the method for the given topology example:
