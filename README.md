@@ -3,7 +3,7 @@ This is a rewritten project from my computational physics course for demonstrati
 Using the the dependence (1) between voltages in neuron cells and outer currents in other other that these voltages cause,
 we can make a model that recognize patterns such as chess arranged pixel grids. 
 
-$$ I_j = \sum_{i < j} w_{ij} V_i \ \  (1), \text{where } i \text{ is a previous neuron in neural chain}$$ 
+$$ I_j = \sum_{i < j} w_{ij} V_i , \text{where } i \text{ is a previous neuron in neural chain} \ \ \ (1)$$ 
 
 First, let define state of a single neuron with state vector, which is calculated numerically with Runge-Kutta method:
 
