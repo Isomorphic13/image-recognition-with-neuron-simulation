@@ -40,7 +40,7 @@ $$
 S(t) = (\vec{s_1}^T(t), ... , \vec{s_n}^T(t) \ \ \ (7)
 $$
 
-The final 
+The module 'learning_model' than uses 'neural_network' to find the optimal weights, such that voltage in the cell E passes the threshold $V_0 = 0$ for chess arranged pixel grids and remains under zero for other grids.
 
 
 
