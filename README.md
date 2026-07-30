@@ -15,10 +15,20 @@ $$
 $$
 
 Then the we can describe a neural network with the following equations:
+$$
+\vec{i_{total}}(t) = \vec{i_{out}}(t) + \vec{i_{p}}(t)
+$$
 
 $$
-\vec{i}(t) = W \vec{v}(\vec{i_{tot}(t)},t)
+\vec{i_{out}}(t) = W \vec{v}(\vec{i_{tot}(t)},t)
 $$
+
+$$
+W = (\vec{w_1}, \vec{w_2}, ..., vec{w_n})
+$$
+
+Where each element 
+
 
 
 As we see, different currents cause different voltage dynamics. We will use this property later, when we will set different apllied currents for white and black pixels. The second important property of current in physiological neurons is how voltages $V_i$ in neuron chains cause current in neuron $j$: 
