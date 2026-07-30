@@ -8,27 +8,27 @@ $$ I_j = \sum_{i < j} w_{ij} V_i \ \  (1), \text{where } i \text{ is a previous 
 Let define state of a single neuron with state vector, which is calculated numerically with Runge-Kutta method:
 
 $$
-\vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T \ \ (2), 
+\vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T \ \ \ (2), 
 $$
 $$
-\frac{d \vec{s}}{dt} := F(V,n,m,h,t)^T \ \ (3)
+\frac{d \vec{s}}{dt} := F(V,n,m,h,t)^T \ \ \ (3)
 $$
 
 Then the we can describe a neural network with the following equations:
 
 $$
-\vec{i_{total}}(t) = \vec{i_{out}}(t) + \vec{i_{p}}(t)
+\vec{i_{total}}(t) = \vec{i_{out}}(t) + \vec{i_{p}} \ \ \(4),
 $$
 
 $$
-\vec{i_{out}}(t) = W \vec{v}(\vec{i_{tot}(t)},t)
+\vec{i_{out}}(t) = W \vec{v}(\vec{i_{tot}}(t),t) \ \ \ (5),
 $$
 
 $$
-W = (\vec{w_1}, \vec{w_2}, ..., \vec{w_n})
+W = (\vec{w_1}, \vec{w_2}, ..., \vec{w_n}) (6),
 $$
 
-Where each element 
+Where index of each element corresponds to a neural cell in the network. $\vec{i_{total}}$ is total currents applied to a cell, \vec{i_{out}} outer currents caused from other cells, \vec{i_{p}} is currents coming from input in each pixel, \vec{v} is membrane voltages, \vec{w_{n}} connections from one neuron to the rest including itself (which is of course equal to to zero).
 
 
 
