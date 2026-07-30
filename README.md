@@ -1,12 +1,19 @@
-This is a rewritten project from my computational physics course for demonstration purpose. The topic of the project is chess board recognition using the Hodgkin-Huxley model for neurons. The model describes the membrane voltage dynamics in a single neuron with a system of differential equations. A description of this model and its equations you can find in Wikipedia: https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model . More detailed explanation of mathematical methodology with visualization you can find in Jupyter notebook file named 'demonstration.ipynb'. In the following you can read the summary of the methodology.
+This is a rewritten project from my computational physics course for demonstration purpose. The topic of the project is chess board recognition using the Hodgkin-Huxley model for neuronal cells. The model describes the membrane voltage dynamics depending of outer current in a single neuron with a system of differential equations. A description of this model and its equations you can find in Wikipedia: https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model . More detailed explanation of mathematical methodology with visualization you can find in Jupyter notebook file named 'demonstration.ipynb'. In the following you can read the summary of the methodology.
 
-Using the the dependence (1) between voltages in neuron cells and outer currents in other cells,
-we can make a model that recognize patterns such as chess arranged pixel grids 
+Using the the dependence (1) between voltages in neuron cells and outer currents in other other that these voltages cause ,
+we can make a model that recognize patterns such as chess arranged pixel grids. 
 
-$$ I_j = \sum_{i < j} w_{ij} V_i \ \ \ \ \ (1)$$ 
+$$ I_j = \sum_{i < j} w_{ij} V_i \ \  (1), \text{where } i \text{ is a previous neuron in neural chain}$$ 
 
+Let define state of a single neuron with state vector, which is calculated numerically with Runge-Kutta method:
 
-![Voltage over time](images/voltage_dynamics_diff_currents1.png) ![Voltage over time](images/voltage_dynamics_diff_currents2.png)
+$$
+\vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T , \\
+\frac{d \vec{s}}{t} := F(V,n,m,h,t)
+$$
+
+Then the we can describe a neural network with the following equations
+
 
 As we see, different currents cause different voltage dynamics. We will use this property later, when we will set different apllied currents for white and black pixels. The second important property of current in physiological neurons is how voltages $V_i$ in neuron chains cause current in neuron $j$: 
 
@@ -18,6 +25,8 @@ $$
 \vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T, \\
 \frac{d \vec{s}}{t} := F(V,n,m,h,t)
 $$
+
+
 
 ![topology](images/topology1.png) 
 
