@@ -8,13 +8,17 @@ $$ I_j = \sum_{i < j} w_{ij} V_i \ \  (1), \text{where } i \text{ is a previous 
 Let define state of a single neuron with state vector, which is calculated numerically with Runge-Kutta method:
 
 $$
-\vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T , 
+\vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T \ \ (2), 
 $$
 $$
-\frac{d \vec{s}}{t} := F(V,n,m,h,t)^T
+\frac{d \vec{s}}{dt} := F(V,n,m,h,t)^T \ \ (3)
 $$
 
-Then the we can describe a neural network with the following equations
+Then the we can describe a neural network with the following equations:
+
+$$
+\vec{i}(t) = W \vec{v}(\vec{i_{tot}(t)},t)
+$$
 
 
 As we see, different currents cause different voltage dynamics. We will use this property later, when we will set different apllied currents for white and black pixels. The second important property of current in physiological neurons is how voltages $V_i$ in neuron chains cause current in neuron $j$: 
