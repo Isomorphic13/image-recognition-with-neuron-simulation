@@ -8,7 +8,8 @@ $$ I_j = \sum_{i < j} w_{ij} V_i \ \  (1), \text{where } i \text{ is a previous 
 Let define state of a single neuron with state vector, which is calculated numerically with Runge-Kutta method:
 
 $$
-\vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T , \\
+\vec{s}(t) := (V(I,n,m,h,t), n(t), m(t), h(t), t)^T , 
+\\
 \frac{d \vec{s}}{t} := F(V,n,m,h,t)
 $$
 
